@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Country Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="navbar">
+    <h1>🌍 Country Explorer</h1>
+    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌙 Dark Mode</button>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <form id="search-form" class="search-box">
+        <input type="text" id="search-input" placeholder="Search for a country (e.g., India, Japan)..." required />
+        <button type="submit">Search</button>
+      </form>
+
+      <select id="region-filter" aria-label="Filter by Region">
+        <option value="all">All Regions</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+      </select>
+    </section>
+
+    <section id="recent-searches" class="recent-chips"></section>
+
+    <div id="status-message" class="status hidden"></div>
+
+    <section id="countries-grid" class="grid"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
